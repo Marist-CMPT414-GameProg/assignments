@@ -41,7 +41,7 @@ If you are a Mac user with CLion IDE, you may skip these instructions. I don't h
 2. Extract the SMFL ZIP archive into your repository directory, but outside of your "GameProg1" solution folder. (Note: You may choose either 32-bit or 64-bit, but this choice will affect the setting you need to configure in Visual Studio.)
 
 ### First C++ Program
-Now we're going to write a very short C++ program that displays the message "Hello, World!" in a small, graphical window.
+Now, we're going to write a very short C++ program that displays the message "Hello, World!" in a text console.
 
 1. Be sure that you have your `Lab1` project open in Visual Studio.
 2. Next, `Add` and `New file...` to your project. This file must be a "C++ File (.cpp)" and you shold name it `hello.cpp`.
@@ -61,10 +61,46 @@ Now we're going to write a very short C++ program that displays the message "Hel
 6. Press F5 or select `Start Debugging` from the `Debug` menu to launch your program.
 
 ### First SFML Program
+Finally, we will update our program to display the message in a small, graphical window using SFML.
 
-8. Tips: You’ll need a main function, and from SFML you will also need the VideoMode, RenderWindow, Text, Font, and possibly other classes.
-Final Program. Extend and improve your code so that the program also displays a countdown, in seconds, starting at 10 and proceeding until it reaches 0. When the countdown finishes, close the window automatically. Tips: You’ll need a loop and the SFML Clock and Time classes.
-Feel free to add any other bells and whistles you like, as long as the above requirements are present.
+1. Modify your source code manually (no copy and paste!) to use SFML to create a window with a text message:
+
+    ```cpp
+    #ifndef CPP_HELLO
+    #define CPP_HELLO
+    
+    #include <iostream>
+    #include <SFML/Graphics.hpp>
+    
+    using namespace std;
+    using namespace sf;
+    
+    int main()
+    {
+        cout << "Hello, World!" << endl;
+    
+        RenderWindow window({ 500, 250 }, "Lab 1", Style::Default);
+    
+        Font font;
+        if (!font.loadFromFile("../../SFML-2.6.0/examples/opengl/resources/tuffy.ttf"))
+            return 1;
+    
+        Text text("Hello World!", font, 75);
+        text.setPosition(75, 75);
+    
+        while (true)
+        {
+            window.clear();
+            window.draw(text);
+            window.display();
+        }
+    
+        return 0;
+    }
+    #endif CPP_HELLO
+    ```
+    2. Configure Visual Studio per your instructors verbal instructions (sorry! not sure what happened to my original instructions for this part of the lab!).
+    3. Once again, press F5 or select `Start Debugging` from the `Debug` menu to launch your program.
 
 ## Deliverables
 To receive full credit for this Lab activity:
