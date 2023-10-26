@@ -1,0 +1,8 @@
+﻿  Planet.cpp
+  main.cpp
+C:\Users\jmatt\Documents\GitHub\johnson-work\GameProg1\Lab4\main.cpp(65,29): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\jmatt\Documents\GitHub\johnson-work\GameProg1\Lab4\main.cpp(135,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jmatt\Documents\GitHub\johnson-work\GameProg1\Lab4\main.cpp(59,5): message : see reference to function template instantiation 'void resetAsteroids<5>(std::array<Asteroid,5> &,const sf::Vector2f &,bool)' being compiled
+  Generating Code...
+C:\Users\jmatt\Documents\GitHub\johnson-work\GameProg1\Lab4\Planet.cpp(19): warning C4172: returning address of local variable or temporary
+  Lab4.vcxproj -> C:\Users\jmatt\Documents\GitHub\johnson-work\GameProg1\x64\Debug\Lab4.exe
