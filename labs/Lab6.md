@@ -1,4 +1,4 @@
-# Lab Activity \#5 -- Handling Collisions
+# Lab Activity \#6 -- Behavior and the State Pattern
 
 ## Goals
 
